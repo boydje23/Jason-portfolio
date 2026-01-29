@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Jason's Portfolio",
+  "name": "Jason's Portfolio Website",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://boydje23.github.io/Jason-portfolio/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
