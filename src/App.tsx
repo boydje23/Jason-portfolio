@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import InteractiveBackground from './components/InteractiveBackground';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -13,6 +14,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="app">
+          <InteractiveBackground />
           <Navbar />
           <div className="main-content">
             <Routes>

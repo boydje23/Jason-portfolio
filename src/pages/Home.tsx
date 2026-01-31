@@ -1,9 +1,49 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Home = () => {
   const heroAnim = useScrollAnimation();
+  const aboutMeAnim = useScrollAnimation();
   const introAnim = useScrollAnimation();
+
+  const [activeImage, setActiveImage] = useState('/images/default.jpg');
+
+
+  const aboutCards = [
+    {
+      id: 'school',
+      title: 'Education',
+      icon: '🎓',
+      description: 'Computer Science student passionate about learning and growth',
+      image: '/images/school.jpg',
+      position: 'top',
+    },
+    {
+      id: 'experience',
+      title: 'Experience',
+      icon: '💼',
+      description: 'Building real-world skills through internships and projects',
+      image: '/images/experience.jpg',
+      position: 'left',
+    },
+    {
+      id: 'projects',
+      title: 'Projects',
+      icon: '🚀',
+      description: 'Creating web applications and exploring new technologies',
+      image: '/images/projects.jpg',
+      position: 'right',
+    },
+    {
+      id: 'interests',
+      title: 'Interests',
+      icon: '✨',
+      description: 'Design, music, gaming, and continuous self-improvement',
+      image: '/images/interests.jpg',
+      position: 'bottom',
+    },
+  ];
 
   return (
     <main className="home">
@@ -18,8 +58,8 @@ const Home = () => {
             </div>
           </div>
           
-          <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Jason</span>
+          <h1 className="hero-title animated-title">
+            Hi, I'm <span className="highlight gradient-text">Jason</span>
           </h1>
           
           <p className="hero-tagline">
@@ -39,6 +79,79 @@ const Home = () => {
               Get In Touch
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section 
+        ref={aboutMeAnim.ref}
+        className="about-me-section"
+      >
+        <h2 className={`section-title fade-in ${aboutMeAnim.isVisible ? 'visible' : ''}`}>
+          Get To Know Me
+        </h2>
+        <div className={`about-me-grid scale-in ${aboutMeAnim.isVisible ? 'visible' : ''}`}>
+          {aboutCards.filter(c => c.position === 'top').map(card => (
+            <div
+              key={card.id}
+              className={`about-card about-card-${card.position}`}
+              onMouseEnter={() => setActiveImage(card.image)}
+              onMouseLeave={() => setActiveImage('/images/default.jpg')}
+            >
+              <span className="about-card-icon">{card.icon}</span>
+              <h3 className="about-card-title">{card.title}</h3>
+              <p className="about-card-desc">{card.description}</p>
+            </div>
+          ))}
+          
+          <div className="about-middle-row">
+            {aboutCards.filter(c => c.position === 'left').map(card => (
+              <div
+                key={card.id}
+                className={`about-card about-card-${card.position}`}
+                onMouseEnter={() => setActiveImage(card.image)}
+                onMouseLeave={() => setActiveImage('/images/default.jpg')}
+              >
+                <span className="about-card-icon">{card.icon}</span>
+                <h3 className="about-card-title">{card.title}</h3>
+                <p className="about-card-desc">{card.description}</p>
+              </div>
+            ))}
+
+            <div className="about-image-container">
+              <img 
+                src={activeImage} 
+                alt="About me" 
+                className="about-center-image"
+              />
+              <div className="about-image-glow"></div>
+            </div>
+
+            {aboutCards.filter(c => c.position === 'right').map(card => (
+              <div
+                key={card.id}
+                className={`about-card about-card-${card.position}`}
+                onMouseEnter={() => setActiveImage(card.image)}
+                onMouseLeave={() => setActiveImage('/images/default.jpg')}
+              >
+                <span className="about-card-icon">{card.icon}</span>
+                <h3 className="about-card-title">{card.title}</h3>
+                <p className="about-card-desc">{card.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {aboutCards.filter(c => c.position === 'bottom').map(card => (
+            <div
+              key={card.id}
+              className={`about-card about-card-${card.position}`}
+              onMouseEnter={() => setActiveImage(card.image)}
+              onMouseLeave={() => setActiveImage('/images/default.jpg')}
+            >
+              <span className="about-card-icon">{card.icon}</span>
+              <h3 className="about-card-title">{card.title}</h3>
+              <p className="about-card-desc">{card.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 

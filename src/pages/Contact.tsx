@@ -29,7 +29,7 @@ const Contact = () => {
         ref={heroAnim.ref}
         className={`contact-hero fade-in ${heroAnim.isVisible ? 'visible' : ''}`}
       >
-        <h1 className="page-title">Contact</h1>
+        <h1 className="page-title animated-title">Contact</h1>
         <p className="page-subtitle">Let's connect and create something great together</p>
       </section>
 

@@ -2,6 +2,7 @@ import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const About = () => {
   const heroAnim = useScrollAnimation();
+  const photoAnim = useScrollAnimation();
   const bioAnim = useScrollAnimation();
   const skillsAnim = useScrollAnimation();
   const eduAnim = useScrollAnimation();
@@ -19,8 +20,21 @@ const About = () => {
         ref={heroAnim.ref}
         className={`about-hero fade-in ${heroAnim.isVisible ? 'visible' : ''}`}
       >
-        <h1 className="page-title">About Me</h1>
+        <h1 className="page-title animated-title">About Me</h1>
         <p className="page-subtitle">Get to know the person behind the code</p>
+      </section>
+
+      <section
+        ref={photoAnim.ref}
+        className={`profile-section scale-in ${photoAnim.isVisible ? 'visible' : ''}`}
+      >
+        <div className="profile-photo-container">
+          <img 
+            src="/profile-placeholder.jpg" 
+            alt="Profile" 
+            className="profile-photo"
+          />
+        </div>
       </section>
 
       <section 

@@ -50,7 +50,7 @@ const Projects = () => {
         ref={heroAnim.ref}
         className={`projects-hero fade-in ${heroAnim.isVisible ? 'visible' : ''}`}
       >
-        <h1 className="page-title">Projects</h1>
+        <h1 className="page-title animated-title">Projects</h1>
         <p className="page-subtitle">A collection of my recent work and side projects</p>
       </section>
 
