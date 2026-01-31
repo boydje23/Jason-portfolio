@@ -52,7 +52,7 @@
 
 ###
 
-<p align="left">I'm Jason Boyd from NYC Manhattan<br><br>- 🔭 I’m working as an AI data analyst<br>- 📚 I'm currently learning more about computer architecture <br>- ⚡ In my free time I go to the gym</p>
+<p align="left">I'm Jason Boyd from NYC Manhattan<br><br>- 🔭 I’m working as a full time student, but always working on projects<br>- 📚 I'm currently working on my personal portfolio website which you can see in my Github (labeled my username :) <br>- ⚡ In my free time I go to the gym</p>
 
 ###
 
