@@ -28,13 +28,15 @@ const About = () => {
         ref={photoAnim.ref}
         className={`profile-section scale-in ${photoAnim.isVisible ? 'visible' : ''}`}
       >
-        <div className="profile-photo-container">
+       <div className="avatar-container">
+        <div className="avatar">
           <img 
-            src="/profile-placeholder.jpg" 
-            alt="Profile" 
-            className="profile-photo"
+          src={`${process.env.PUBLIC_URL}/images/avatar.jpg`} 
+          alt="Jason" 
+          className="avatar-image"
           />
-        </div>
+          </div>
+          </div>
       </section>
 
       <section 

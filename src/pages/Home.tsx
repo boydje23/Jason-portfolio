@@ -7,8 +7,7 @@ const Home = () => {
   const aboutMeAnim = useScrollAnimation();
   const introAnim = useScrollAnimation();
 
-  const [activeImage, setActiveImage] = useState('/images/default.jpg');
-
+  const [activeImage, setActiveImage] = useState(`${process.env.PUBLIC_URL}/images/default.jpg`);
 
   const aboutCards = [
     {
@@ -16,7 +15,7 @@ const Home = () => {
       title: 'Education',
       icon: '🎓',
       description: 'Computer Science student passionate about learning and growth',
-      image: '/images/school.jpg',
+      image: `${process.env.PUBLIC_URL}/images/school.jpg`,
       position: 'top',
     },
     {
@@ -24,7 +23,7 @@ const Home = () => {
       title: 'Experience',
       icon: '💼',
       description: 'Building real-world skills through internships and projects',
-      image: '/images/experience.jpg',
+      image: `${process.env.PUBLIC_URL}/images/experience.jpg`,
       position: 'left',
     },
     {
@@ -32,7 +31,7 @@ const Home = () => {
       title: 'Projects',
       icon: '🚀',
       description: 'Creating web applications and exploring new technologies',
-      image: '/images/projects.jpg',
+      image: `${process.env.PUBLIC_URL}/images/projects.jpg`,
       position: 'right',
     },
     {
@@ -40,7 +39,7 @@ const Home = () => {
       title: 'Interests',
       icon: '✨',
       description: 'Design, music, gaming, and continuous self-improvement',
-      image: '/images/interests.jpg',
+      image: `${process.env.PUBLIC_URL}/images/interests.jpg`,
       position: 'bottom',
     },
   ];
@@ -54,10 +53,14 @@ const Home = () => {
         >
           <div className="avatar-container">
             <div className="avatar">
-              <span className="avatar-initials">J</span>
-            </div>
-          </div>
-          
+              <img 
+              src={`${process.env.PUBLIC_URL}/images/avatar.jpg`} 
+              alt="Jason" 
+              className="avatar-image"
+              />
+              </div>
+              </div>
+
           <h1 className="hero-title animated-title">
             Hi, I'm <span className="highlight gradient-text">Jason</span>
           </h1>
@@ -95,7 +98,7 @@ const Home = () => {
               key={card.id}
               className={`about-card about-card-${card.position}`}
               onMouseEnter={() => setActiveImage(card.image)}
-              onMouseLeave={() => setActiveImage('/images/default.jpg')}
+              onMouseLeave={() => setActiveImage(`${process.env.PUBLIC_URL}/images/default.jpg`)}
             >
               <span className="about-card-icon">{card.icon}</span>
               <h3 className="about-card-title">{card.title}</h3>
@@ -109,7 +112,7 @@ const Home = () => {
                 key={card.id}
                 className={`about-card about-card-${card.position}`}
                 onMouseEnter={() => setActiveImage(card.image)}
-                onMouseLeave={() => setActiveImage('/images/default.jpg')}
+                onMouseLeave={() => setActiveImage(`${process.env.PUBLIC_URL}/images/default.jpg`)}
               >
                 <span className="about-card-icon">{card.icon}</span>
                 <h3 className="about-card-title">{card.title}</h3>
@@ -131,7 +134,7 @@ const Home = () => {
                 key={card.id}
                 className={`about-card about-card-${card.position}`}
                 onMouseEnter={() => setActiveImage(card.image)}
-                onMouseLeave={() => setActiveImage('/images/default.jpg')}
+                onMouseLeave={() => setActiveImage(`${process.env.PUBLIC_URL}/images/default.jpg`)}
               >
                 <span className="about-card-icon">{card.icon}</span>
                 <h3 className="about-card-title">{card.title}</h3>
@@ -145,7 +148,7 @@ const Home = () => {
               key={card.id}
               className={`about-card about-card-${card.position}`}
               onMouseEnter={() => setActiveImage(card.image)}
-              onMouseLeave={() => setActiveImage('/images/default.jpg')}
+              onMouseLeave={() => setActiveImage(`${process.env.PUBLIC_URL}/images/default.jpg`)}
             >
               <span className="about-card-icon">{card.icon}</span>
               <h3 className="about-card-title">{card.title}</h3>
