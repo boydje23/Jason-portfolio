@@ -8,10 +8,10 @@ const About = () => {
   const eduAnim = useScrollAnimation();
 
   const skills = [
-    { category: 'Languages', items: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS'] },
-    { category: 'Frameworks', items: ['React', 'Node.js', 'Express', 'Next.js'] },
-    { category: 'Tools', items: ['Git', 'VS Code', 'Figma', 'Docker'] },
-    { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Firebase'] },
+    { category: 'Languages', items: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS', 'java'] },
+    { category: 'Frameworks/ Libraries', items: ['React', 'Node.js', 'PyTorch', 'TensorFlow', 'NetworkX'] },
+    { category: 'Tools', items: ['Git', 'VS Code', 'Vite', 'Docker'] },
+    // { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Firebase'] },
   ];
 
   return (
@@ -46,14 +46,10 @@ const About = () => {
         <div className="bio-content">
           <h2 className={`section-title fade-in-left ${bioAnim.isVisible ? 'visible' : ''}`}>Bio</h2>
           <p className={`bio-text fade-in-left stagger-1 ${bioAnim.isVisible ? 'visible' : ''}`}>
-            I'm a Computer Science student with a deep passion for web design and development. 
-            My journey into tech started with curiosity about how websites work, and quickly 
-            evolved into a love for creating digital experiences that are both beautiful and functional.
+            I'm a Computer Science student with a deep passion for building technology that makes learning more personal and accessible. My interest began with curiosity about how people learn and how software can adapt to individual needs, and it quickly grew into a drive to create tools that blend thoughtful design with real-world impact.
           </p>
           <p className={`bio-text fade-in-left stagger-2 ${bioAnim.isVisible ? 'visible' : ''}`}>
-            When I'm not coding, you'll find me exploring new design trends, contributing to 
-            open-source projects, or learning about the latest web technologies. I believe in 
-            continuous learning and pushing the boundaries of what's possible on the web.
+            When I'm not coding, you'll find me exploring research at the intersection of Computer Science and Psychology, experimenting with new full-stack ideas, or working on projects focused on personalized education for students with autism. I believe in continuous learning, human-centered design, and using technology to build experiences that genuinely help others thrive.
           </p>
         </div>
       </section>
@@ -89,10 +85,10 @@ const About = () => {
         <h2 className={`section-title fade-in ${eduAnim.isVisible ? 'visible' : ''}`}>Education</h2>
         <div className={`education-card fade-in-right stagger-1 ${eduAnim.isVisible ? 'visible' : ''}`}>
           <div className="education-header">
-            <h3 className="education-degree">Bachelor of Science in Computer Science</h3>
-            <span className="education-year">2022 - Present</span>
+            <h3 className="education-degree">Bachelor of Arts in Computer Science</h3>
+            <span className="education-year">2023 - Present</span>
           </div>
-          <p className="education-school">University Name</p>
+          <p className="education-school">Wake Forest University</p>
           <p className="education-details">
             Focusing on software engineering, web development, and user experience design.
             Maintaining a strong academic record while actively participating in coding clubs
@@ -101,14 +97,12 @@ const About = () => {
         </div>
         <div className={`education-card fade-in-right stagger-1 ${eduAnim.isVisible ? 'visible' : ''}`}>
           <div className="education-header">
-            <h3 className="education-degree">Bachelor of Science in Computer Science</h3>
-            <span className="education-year">2022 - Present</span>
+            <h3 className="education-degree">Bachelor of Arts in Psychology</h3>
+            <span className="education-year">2023 - Present</span>
           </div>
-          <p className="education-school">University Name</p>
+          <p className="education-school">Wake Forest University</p>
           <p className="education-details">
-            Focusing on software engineering, web development, and user experience design.
-            Maintaining a strong academic record while actively participating in coding clubs
-            and hackathons.
+          I’m deeply interested in psychology because I’ve always been curious about why people think, feel, and behave the way they do. I enjoy exploring the patterns behind human decision-making, personality, motivation, and how our experiences shape the way we see the world.
           </p>
         </div>
       </section>
