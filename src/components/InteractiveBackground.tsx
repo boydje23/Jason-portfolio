@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-// Used Copiolet to assist me with this
+// Used Copilot to assist me with this
 
 const InteractiveBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);

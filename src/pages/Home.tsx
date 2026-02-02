@@ -66,7 +66,7 @@ const Home = () => {
           </h1>
           
           <p className="hero-tagline">
-            Computer Science Student & Psycholgy Student
+            Computer Science & Psycholgy Student
           </p>
           
           <p className="hero-description">
