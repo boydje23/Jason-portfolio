@@ -38,7 +38,7 @@ const Home = () => {
       id: 'interests',
       title: 'Interests',
       icon: '✨',
-      description: 'Design, music, and the phsycial fitness',
+      description: 'Design, music, and phsycial fitness',
       image: `${process.env.PUBLIC_URL}/images/interests.jpg`,
       position: 'bottom',
     },
